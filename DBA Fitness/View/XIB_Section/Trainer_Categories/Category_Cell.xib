@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-Regular.ttf">
+            <string>Nunito-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Category_Cell" id="KGk-i7-Jjw" customClass="Category_Cell" customModule="DBA_Fitness" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JOp-ek-NKY">
+                        <rect key="frame" x="5" y="10" width="315" height="30"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" translatesAutoresizingMaskIntoConstraints="NO" id="sSw-bZ-bvg">
+                                <rect key="frame" x="0.0" y="11" width="8" height="8"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sSw-bZ-bvg" secondAttribute="height" multiplier="1:1" id="15N-Vd-SYw"/>
+                                    <constraint firstAttribute="width" constant="8" id="1mW-Bn-VpK"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Competitive:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kmk-oy-GHH">
+                                <rect key="frame" x="38" y="5.5" width="243" height="19"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SV4-so-MnW">
+                                <rect key="frame" x="291" y="3" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="SV4-so-MnW" secondAttribute="height" multiplier="1:1" id="4ca-3z-1qk"/>
+                                    <constraint firstAttribute="height" constant="24" id="6b3-oc-g0Q"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sSw-bZ-bvg" firstAttribute="leading" secondItem="JOp-ek-NKY" secondAttribute="leading" id="5SC-TO-WEs"/>
+                            <constraint firstAttribute="height" constant="30" id="BVY-XF-rYP"/>
+                            <constraint firstItem="SV4-so-MnW" firstAttribute="centerY" secondItem="JOp-ek-NKY" secondAttribute="centerY" id="LAl-jV-k2b"/>
+                            <constraint firstItem="sSw-bZ-bvg" firstAttribute="centerY" secondItem="Kmk-oy-GHH" secondAttribute="centerY" id="TQB-hv-8nH"/>
+                            <constraint firstAttribute="trailing" secondItem="SV4-so-MnW" secondAttribute="trailing" id="fQ6-C4-HbS"/>
+                            <constraint firstItem="Kmk-oy-GHH" firstAttribute="centerY" secondItem="SV4-so-MnW" secondAttribute="centerY" id="kVr-uS-gmc"/>
+                            <constraint firstItem="Kmk-oy-GHH" firstAttribute="leading" secondItem="sSw-bZ-bvg" secondAttribute="trailing" constant="30" id="nUh-9e-dtV"/>
+                            <constraint firstItem="SV4-so-MnW" firstAttribute="leading" secondItem="Kmk-oy-GHH" secondAttribute="trailing" constant="10" id="nf1-gb-vPI"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="JOp-ek-NKY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="Pp4-Jl-MMA"/>
+                    <constraint firstItem="JOp-ek-NKY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="mec-8x-b8w"/>
+                    <constraint firstAttribute="trailing" secondItem="JOp-ek-NKY" secondAttribute="trailing" id="ozY-Po-zod"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="category_Name" destination="Kmk-oy-GHH" id="xhO-9g-gic"/>
+                <outlet property="isSelect_Category" destination="SV4-so-MnW" id="bZY-hk-6a8"/>
+            </connections>
+            <point key="canvasLocation" x="55" y="152"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="circle" width="512" height="512"/>
+    </resources>
+</document>

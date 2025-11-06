@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-Regular.ttf">
+            <string>Nunito-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Scan Product-->
+        <scene sceneID="xOK-Af-nfD">
+            <objects>
+                <viewController storyboardIdentifier="Scan_Product" id="tSn-EF-ZuQ" customClass="Scan_Product" customModule="DBA_Fitness" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YHQ-au-cEf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J3h-2D-nip">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                <color key="backgroundColor" name="Background_CC"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EB0-PI-bFY">
+                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backIcon" translatesAutoresizingMaskIntoConstraints="NO" id="3MB-V0-XSz">
+                                        <rect key="frame" x="15" y="15" width="11" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="MO3-Wm-MO2"/>
+                                            <constraint firstAttribute="width" constant="11" id="Wym-QY-KCy"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hB-HZ-e1z">
+                                        <rect key="frame" x="5" y="5" width="51" height="50"/>
+                                        <connections>
+                                            <action selector="back:" destination="tSn-EF-ZuQ" eventType="touchUpInside" id="iNk-hh-P4b"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bz-RW-YVH">
+                                        <rect key="frame" x="139.5" y="12.5" width="96.5" height="25.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gallery" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7PV-Ai-cbn">
+                                        <rect key="frame" x="303.5" y="13.5" width="56.5" height="23"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OvQ-Z4-PpU">
+                                        <rect key="frame" x="340" y="3.5" width="30" height="53"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="Background_CC"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="11t-g7-Rdr"/>
+                                    <constraint firstItem="OvQ-Z4-PpU" firstAttribute="bottom" secondItem="7PV-Ai-cbn" secondAttribute="bottom" constant="20" id="EIg-oU-euz"/>
+                                    <constraint firstAttribute="trailing" secondItem="7PV-Ai-cbn" secondAttribute="trailing" constant="15" id="G3o-23-cgI"/>
+                                    <constraint firstItem="4hB-HZ-e1z" firstAttribute="trailing" secondItem="3MB-V0-XSz" secondAttribute="trailing" constant="30" id="H9U-ug-2Uk"/>
+                                    <constraint firstItem="3MB-V0-XSz" firstAttribute="leading" secondItem="EB0-PI-bFY" secondAttribute="leading" constant="15" id="Jhn-CH-PRw"/>
+                                    <constraint firstItem="OvQ-Z4-PpU" firstAttribute="trailing" secondItem="7PV-Ai-cbn" secondAttribute="trailing" constant="10" id="O6n-Ge-86a"/>
+                                    <constraint firstItem="OvQ-Z4-PpU" firstAttribute="top" secondItem="7PV-Ai-cbn" secondAttribute="top" constant="-10" id="PJ2-vY-Wcc"/>
+                                    <constraint firstItem="3MB-V0-XSz" firstAttribute="centerY" secondItem="EB0-PI-bFY" secondAttribute="centerY" id="UBn-8n-j1x"/>
+                                    <constraint firstItem="4hB-HZ-e1z" firstAttribute="bottom" secondItem="3MB-V0-XSz" secondAttribute="bottom" constant="20" id="USm-if-e1G"/>
+                                    <constraint firstItem="3bz-RW-YVH" firstAttribute="centerX" secondItem="EB0-PI-bFY" secondAttribute="centerX" id="XLO-MH-X5N"/>
+                                    <constraint firstItem="7PV-Ai-cbn" firstAttribute="centerY" secondItem="EB0-PI-bFY" secondAttribute="centerY" id="ZRA-ub-UlA"/>
+                                    <constraint firstItem="4hB-HZ-e1z" firstAttribute="leading" secondItem="3MB-V0-XSz" secondAttribute="leading" constant="-10" id="gpZ-hh-SF4"/>
+                                    <constraint firstItem="3bz-RW-YVH" firstAttribute="centerY" secondItem="EB0-PI-bFY" secondAttribute="centerY" id="i2l-nB-1ig"/>
+                                    <constraint firstItem="4hB-HZ-e1z" firstAttribute="top" secondItem="3MB-V0-XSz" secondAttribute="top" constant="-10" id="www-jG-Ve8"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DpU-CP-IdO">
+                                <rect key="frame" x="0.0" y="80" width="375" height="567"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wbf-Iw-ICb">
+                                <rect key="frame" x="0.0" y="587" width="375" height="60"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter the barcode manually" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ixP-Km-eq4" customClass="TextField" customModule="DBA_Fitness" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="0.0" width="345" height="60"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ixP-Km-eq4" secondAttribute="bottom" id="HDq-Wg-Dvj"/>
+                                    <constraint firstAttribute="height" constant="60" id="T3w-pI-1cf"/>
+                                    <constraint firstItem="ixP-Km-eq4" firstAttribute="leading" secondItem="Wbf-Iw-ICb" secondAttribute="leading" constant="15" id="U6q-ca-fA1"/>
+                                    <constraint firstItem="ixP-Km-eq4" firstAttribute="top" secondItem="Wbf-Iw-ICb" secondAttribute="top" id="iEJ-rH-XDj"/>
+                                    <constraint firstAttribute="trailing" secondItem="ixP-Km-eq4" secondAttribute="trailing" constant="15" id="uVv-ob-uQC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nXt-Y9-Fo9"/>
+                        <color key="backgroundColor" name="Background_CC"/>
+                        <constraints>
+                            <constraint firstItem="DpU-CP-IdO" firstAttribute="leading" secondItem="Wbf-Iw-ICb" secondAttribute="leading" id="5MD-3B-5bS"/>
+                            <constraint firstItem="DpU-CP-IdO" firstAttribute="trailing" secondItem="EB0-PI-bFY" secondAttribute="trailing" id="7js-m5-Cfq"/>
+                            <constraint firstItem="DpU-CP-IdO" firstAttribute="top" secondItem="EB0-PI-bFY" secondAttribute="bottom" constant="10" id="7tC-5g-WE3"/>
+                            <constraint firstItem="J3h-2D-nip" firstAttribute="leading" secondItem="YHQ-au-cEf" secondAttribute="leading" id="9nA-Cn-no9"/>
+                            <constraint firstItem="nXt-Y9-Fo9" firstAttribute="bottom" secondItem="DpU-CP-IdO" secondAttribute="bottom" constant="20" id="Dno-gg-hCR"/>
+                            <constraint firstItem="EB0-PI-bFY" firstAttribute="top" secondItem="J3h-2D-nip" secondAttribute="bottom" id="Pvs-X7-vAJ"/>
+                            <constraint firstItem="DpU-CP-IdO" firstAttribute="trailing" secondItem="Wbf-Iw-ICb" secondAttribute="trailing" id="W5V-wp-2bP"/>
+                            <constraint firstItem="EB0-PI-bFY" firstAttribute="top" secondItem="nXt-Y9-Fo9" secondAttribute="top" id="cfb-7I-3nb"/>
+                            <constraint firstItem="DpU-CP-IdO" firstAttribute="leading" secondItem="EB0-PI-bFY" secondAttribute="leading" id="g3p-S0-agb"/>
+                            <constraint firstItem="J3h-2D-nip" firstAttribute="top" secondItem="YHQ-au-cEf" secondAttribute="top" id="hdx-p1-9zl"/>
+                            <constraint firstAttribute="trailing" secondItem="J3h-2D-nip" secondAttribute="trailing" id="ieX-IC-79z"/>
+                            <constraint firstItem="nXt-Y9-Fo9" firstAttribute="bottom" secondItem="Wbf-Iw-ICb" secondAttribute="bottom" constant="20" id="lR2-2Q-gts"/>
+                            <constraint firstItem="EB0-PI-bFY" firstAttribute="trailing" secondItem="nXt-Y9-Fo9" secondAttribute="trailing" id="wmc-kn-EVY"/>
+                            <constraint firstItem="EB0-PI-bFY" firstAttribute="leading" secondItem="nXt-Y9-Fo9" secondAttribute="leading" id="yHN-Dn-rpQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tdK-Yk-Scr"/>
+                    <connections>
+                        <outlet property="barCode" destination="ixP-Km-eq4" id="DgB-8D-42v"/>
+                        <outlet property="mainView" destination="Wbf-Iw-ICb" id="l2i-lw-JtN"/>
+                        <outlet property="scanView" destination="DpU-CP-IdO" id="BpB-LR-yuM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gzj-1Y-HV4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1071" y="3083"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backIcon" width="9" height="17"/>
+        <namedColor name="Background_CC">
+            <color red="0.21568627450980393" green="0.19215686274509805" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

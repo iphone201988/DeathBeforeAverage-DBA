@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-SemiBold.ttf">
+            <string>Nunito-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TrainingExercise" rowHeight="80" id="KGk-i7-Jjw" customClass="TrainingExercise" customModule="DBA_Fitness" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YLW-FB-N2w">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="65.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Monday" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOa-Ag-UEp">
+                                <rect key="frame" x="20" y="10" width="280" height="20"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Monday" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Khh-b1-iNc">
+                                <rect key="frame" x="20" y="35" width="280" height="20.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="Sub_Interface_BG_CC"/>
+                        <constraints>
+                            <constraint firstItem="Khh-b1-iNc" firstAttribute="leading" secondItem="IOa-Ag-UEp" secondAttribute="leading" id="1LO-Pj-yY0"/>
+                            <constraint firstItem="Khh-b1-iNc" firstAttribute="top" secondItem="IOa-Ag-UEp" secondAttribute="bottom" constant="5" id="4X3-Ko-D9k"/>
+                            <constraint firstItem="IOa-Ag-UEp" firstAttribute="top" secondItem="YLW-FB-N2w" secondAttribute="top" constant="10" id="5Og-EQ-g9K"/>
+                            <constraint firstAttribute="trailing" secondItem="IOa-Ag-UEp" secondAttribute="trailing" constant="20" id="Iuo-B5-TIN"/>
+                            <constraint firstItem="IOa-Ag-UEp" firstAttribute="leading" secondItem="YLW-FB-N2w" secondAttribute="leading" constant="20" id="dNV-Ch-MSd"/>
+                            <constraint firstItem="Khh-b1-iNc" firstAttribute="trailing" secondItem="IOa-Ag-UEp" secondAttribute="trailing" id="sDf-O5-bG9"/>
+                            <constraint firstAttribute="bottom" secondItem="Khh-b1-iNc" secondAttribute="bottom" constant="10" id="wm9-Eb-efK"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="YLW-FB-N2w" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="7Zc-M0-T7L"/>
+                    <constraint firstItem="YLW-FB-N2w" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Lgd-PF-UXF"/>
+                    <constraint firstAttribute="trailing" secondItem="YLW-FB-N2w" secondAttribute="trailing" id="Zxk-yb-5Fo"/>
+                    <constraint firstAttribute="bottom" secondItem="YLW-FB-N2w" secondAttribute="bottom" constant="14.5" id="dIH-PF-RPH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="days_View" destination="YLW-FB-N2w" id="tP7-Sz-WSZ"/>
+                <outlet property="exerciseDesc" destination="Khh-b1-iNc" id="OIS-lw-fWU"/>
+                <outlet property="exerciseName" destination="IOa-Ag-UEp" id="YUu-UX-dhS"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="165.40178571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Sub_Interface_BG_CC">
+            <color red="0.29411764705882354" green="0.27058823529411763" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

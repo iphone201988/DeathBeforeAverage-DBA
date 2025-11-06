@@ -1,0 +1,109 @@
+PODS:
+  - Alamofire (4.9.1)
+  - FacebookCore (0.9.0):
+    - FBSDKCoreKit (~> 5.0)
+  - FacebookLogin (0.9.0):
+    - FacebookCore (~> 0.9.0)
+    - FBSDKCoreKit (~> 5.0)
+    - FBSDKLoginKit (~> 5.0)
+  - FBSDKCoreKit (5.15.1):
+    - FBSDKCoreKit/Basics (= 5.15.1)
+    - FBSDKCoreKit/Core (= 5.15.1)
+  - FBSDKCoreKit/Basics (5.15.1)
+  - FBSDKCoreKit/Core (5.15.1):
+    - FBSDKCoreKit/Basics
+  - FBSDKLoginKit (5.15.1):
+    - FBSDKLoginKit/Login (= 5.15.1)
+  - FBSDKLoginKit/Login (5.15.1):
+    - FBSDKCoreKit (~> 5.0)
+  - GoogleMaps/Base (3.9.0)
+  - GooglePlaces (3.9.0):
+    - GoogleMaps/Base (= 3.9.0)
+  - IQKeyboardManagerSwift (6.5.6)
+  - JMMaskTextField-Swift (0.1.3)
+  - lottie-ios (3.2.3)
+  - MGSwipeTableCell (1.6.11)
+  - NVActivityIndicatorView (4.8.0):
+    - NVActivityIndicatorView/Presenter (= 4.8.0)
+  - NVActivityIndicatorView/Presenter (4.8.0)
+  - PinterestLayout (1.0.3)
+  - SDWebImage (5.8.0):
+    - SDWebImage/Core (= 5.8.0)
+  - SDWebImage/Core (5.8.0)
+  - STRatingControl (1.1.2)
+  - Stripe (22.8.3):
+    - Stripe/Stripe3DS2 (= 22.8.3)
+    - StripeApplePay (= 22.8.3)
+    - StripeCore (= 22.8.3)
+    - StripeUICore (= 22.8.3)
+  - Stripe/Stripe3DS2 (22.8.3):
+    - StripeApplePay (= 22.8.3)
+    - StripeCore (= 22.8.3)
+    - StripeUICore (= 22.8.3)
+  - StripeApplePay (22.8.3):
+    - StripeCore (= 22.8.3)
+  - StripeCore (22.8.3)
+  - StripeUICore (22.8.3):
+    - StripeCore (= 22.8.3)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0)
+  - FacebookCore
+  - FacebookLogin
+  - GooglePlaces
+  - IQKeyboardManagerSwift
+  - JMMaskTextField-Swift
+  - lottie-ios
+  - MGSwipeTableCell
+  - NVActivityIndicatorView
+  - PinterestLayout
+  - SDWebImage
+  - STRatingControl
+  - Stripe (= 22.8.3)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - FacebookCore
+    - FacebookLogin
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - GoogleMaps
+    - GooglePlaces
+    - IQKeyboardManagerSwift
+    - JMMaskTextField-Swift
+    - lottie-ios
+    - MGSwipeTableCell
+    - NVActivityIndicatorView
+    - PinterestLayout
+    - SDWebImage
+    - STRatingControl
+    - Stripe
+    - StripeApplePay
+    - StripeCore
+    - StripeUICore
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  FacebookCore: ba86524b66cfa86d0f8e65d08faa8504a9f732dd
+  FacebookLogin: 6cee9fd6e1fe976fe8f7eec199e27b28b14f5d63
+  FBSDKCoreKit: 1d5acf7c9d7a2f92bb1a242dc60cae5b7adb91df
+  FBSDKLoginKit: f1ea8026a58b52d30c9f2e6a58ca7d813619fb83
+  GoogleMaps: 4b5346bddfe6911bb89155d43c903020170523ac
+  GooglePlaces: 1634d019549b969d40fe0ccb0b9513055adebe01
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  JMMaskTextField-Swift: 16aa552605b121285e6c2f0817ab31cea5f4704b
+  lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
+  MGSwipeTableCell: b804e4e450dee439c42250be90bd50458bf67fce
+  NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
+  PinterestLayout: f1c7ec0254ffa842d69f1b43e4436c8ded4359b9
+  SDWebImage: 84000f962cbfa70c07f19d2234cbfcf5d779b5dc
+  STRatingControl: 254ee5f6dd174e3fa9d8365a08326291fd0bd950
+  Stripe: 90c12b350ae9e8a262efa87d230c00110c741f88
+  StripeApplePay: ce1edb7b3cb8b1abe29734f0fb887ee839a08043
+  StripeCore: 7197196aa2344c5c5eaf4a1ba406950c06b1c01c
+  StripeUICore: 5b635db49163d62f9aa831269031de382bcb2bbd
+
+PODFILE CHECKSUM: 67289c759614a8e9017c3f810289d10e8edddcdd
+
+COCOAPODS: 1.11.3
