@@ -182,15 +182,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         GMSPlacesClient.provideAPIKey("AIzaSyBbaogEE1RE4Qhn51dyV4AjLbbBN1UVdBc")
 
-        guard let userRole =  DataSaver.dataSaverManager.fetchData(key: "userType") as? String else{
+        guard let userRole = DataSaver.dataSaverManager.fetchData(key: "userType") as? String else{
             return false
         }
 
-        guard let sessionkey =  DataSaver.dataSaverManager.fetchData(key: "sessionkey") as? String else{
+        guard let sessionkey = DataSaver.dataSaverManager.fetchData(key: "sessionkey") as? String else{
             return false
         }
 
-        guard let userid =  DataSaver.dataSaverManager.fetchData(key: "userid") as? String else{
+        guard let userid = DataSaver.dataSaverManager.fetchData(key: "userid") as? String else{
             return false
         }
 

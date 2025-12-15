@@ -3,10 +3,10 @@ import Foundation
 
 // MARK: - M_ProgramMealInfo
 struct M_ProgramMealInfo: Codable {
-    let status: Int
-    let message: String
+    let status: Int?
+    let message: String?
     let data: [M_ProgramMealData]?
-    let method: String
+    let method: String?
 }
 
 // MARK: - M_ProgramMealData
