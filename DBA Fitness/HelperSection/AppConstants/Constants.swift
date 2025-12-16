@@ -69,5 +69,5 @@ var uploadingFlag = true
 var data: Data?
 var reducedUploadingImage:UIImage?
 var categoryArrayIndex:Int?
-
 var trainerNavigateViaSentProgramsList: Bool?
+var isLogEnable: Bool = false

@@ -42,7 +42,7 @@ extension UIViewController{
             "userid" : userid,
         ]
         
-        print("excercise_name: \(excercise_name)\n, excercise_description: \(excercise_description)\n, excercise_image: \(excercise_image)\n, excercise_video: \(excercise_video)\n, excercise_id: \(excercise_id)\n, apiUrl: \(apiUrl)\n, thumbnil: \(thumbnil)\n, training_id: \(training_id)\n, program_id: \(program_id)\n, exercise_info: \(exercise_info)\n, sets: \(sets)\n, reps: \(reps)\n, time: \(time)\n, type: \(type)\n")
+        debugLog("excercise_name: \(excercise_name)\n, excercise_description: \(excercise_description)\n, excercise_image: \(excercise_image)\n, excercise_video: \(excercise_video)\n, excercise_id: \(excercise_id)\n, apiUrl: \(apiUrl)\n, thumbnil: \(thumbnil)\n, training_id: \(training_id)\n, program_id: \(program_id)\n, exercise_info: \(exercise_info)\n, sets: \(sets)\n, reps: \(reps)\n, time: \(time)\n, type: \(type)\n")
         
         Alamofire.upload(multipartFormData: { (multipartFormData) in
             
@@ -129,7 +129,7 @@ extension UIViewController{
                     
                     NVActivityIndicator.managerHandler.stopIndicator()
                     
-                    print("result: \(response.result.debugDescription)")
+                    debugLog("result: \(response.result.debugDescription)")
                     
                     if response.result.isSuccess{
                         guard let data = response.data else { return }

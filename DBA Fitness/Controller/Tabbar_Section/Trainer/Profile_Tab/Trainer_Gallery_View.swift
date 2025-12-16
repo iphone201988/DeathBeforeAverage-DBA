@@ -402,7 +402,7 @@ extension Trainer_Gallery_View: PinterestLayoutDelegate {
     
     func collectionView(collectionView: UICollectionView, heightForImageAtIndexPath indexPath: IndexPath, withWidth: CGFloat) -> CGFloat {
         let image = images[indexPath.row%7]
-        print(" image.height(forWidth: withWidth) \( image.height(forWidth: withWidth)) withWidth \(withWidth)")
+        debugLog(" image.height(forWidth: withWidth) \( image.height(forWidth: withWidth)) withWidth \(withWidth)")
         return image.height(forWidth: withWidth)
     }
 

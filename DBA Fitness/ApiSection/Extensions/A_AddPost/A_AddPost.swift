@@ -30,7 +30,7 @@ extension UIViewController{
             "userid" : userid,
         ]
         
-        print("Url \(Url) \(APIheaders)")
+        debugLog("Url \(Url) \(APIheaders)")
         
         
         Alamofire.upload(multipartFormData: { (multipartFormData) in
@@ -49,7 +49,7 @@ extension UIViewController{
                     let videoData = try Data(contentsOf: video)
                     multipartFormData.append(videoData, withName: "video", fileName: fileName, mimeType: mimeType)
                 } catch {
-                    print("Error converting video to Data: \(error.localizedDescription)")
+                    debugLog("Error converting video to Data: \(error.localizedDescription)")
                 }
             }
             

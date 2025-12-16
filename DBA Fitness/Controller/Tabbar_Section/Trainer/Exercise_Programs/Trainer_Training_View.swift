@@ -781,7 +781,7 @@ func convertDataToJSONString(data: Data) -> String? {
         // Convert the JSON data to a string
         return String(data: jsonData, encoding: .utf8)
     } catch {
-        print("Error converting JSON data to JSON string: \(error)")
+        debugLog("Error converting JSON data to JSON string: \(error)")
         return nil
     }
 }
@@ -793,7 +793,7 @@ func convertToJSONData(params: [String: [[String: Any]]]) -> Data? {
         let jsonData = try JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
         return jsonData
     } catch {
-        print("Error converting dictionary to JSON data: \(error)")
+        debugLog("Error converting dictionary to JSON data: \(error)")
         return nil
     }
 }

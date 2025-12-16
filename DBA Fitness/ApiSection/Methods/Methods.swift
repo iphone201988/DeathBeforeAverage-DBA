@@ -38,7 +38,7 @@ class Methods: NSObject {
                 "userid" : userid ?? "",
             ]
 
-            print("APIheaders: \(APIheaders) and requestURL: \(url) and parameters: \(parameters)")
+            debugLog("APIheaders: \(APIheaders) and requestURL: \(url) and parameters: \(parameters)")
 
             Alamofire.request(url, method: .post, parameters: parameters, encoding: URLEncoding.httpBody, headers:APIheaders ) //URLEncoding.httpBody
                 .responseJSON { response in
@@ -47,7 +47,7 @@ class Methods: NSObject {
                     guard let data = response.data else { return }
                     if response.result.isSuccess {
                         let JSON1 = response.result.value as? [String : Any]
-                        print("JSON1: \(JSON1?["data"] ?? "")")
+                        debugLog("JSON1: \(JSON1?["data"] ?? "")")
                         completion(JSON1 ,true,nil,responseObject as AnyObject, data)
                     }else{
                         if let error = response.result.error {
@@ -97,7 +97,7 @@ class Methods: NSObject {
                     "userid" : userid,
                 ]
                 
-                print("APIheaders: \(APIheaders) and requestURL: \(url)")
+            debugLog("APIheaders: \(APIheaders) and requestURL: \(url)")
             
             guard let requestURL = URL(string: url) else { return }
             var customURLRequest = URLRequest(url: requestURL)
@@ -111,7 +111,7 @@ class Methods: NSObject {
                         guard let data = response.data else { return }
                         if response.result.isSuccess{
                             let JSON1 = response.result.value as? [String : Any]
-                            print("JSON1: \(JSON1?["data"] ?? "")")
+                            debugLog("JSON1: \(JSON1?["data"] ?? "")")
                             completion(JSON1 ,true,nil,responseObject as AnyObject, data)
                         }else{
                             if let error = response.result.error {
@@ -136,7 +136,7 @@ class Methods: NSObject {
                 "userid" : userid,
             ]
             
-            print("APIheaders: \(APIheaders) and requestURL: \(url)")
+            debugLog("APIheaders: \(APIheaders) and requestURL: \(url)")
             
             Alamofire.request(url, method: .get, parameters: parameters, encoding: URLEncoding.httpBody, headers:APIheaders )
                 .responseJSON { response in
@@ -145,7 +145,7 @@ class Methods: NSObject {
                     guard let data = response.data else { return }
                     if response.result.isSuccess{
                         let JSON1 = response.result.value as? [String : Any]
-                        print("JSON1: \(JSON1?["data"] ?? "")")
+                        debugLog("JSON1: \(JSON1?["data"] ?? "")")
                         completion(JSON1 ,true,nil,responseObject as AnyObject, data)
                     }else{
                         if let error = response.result.error {

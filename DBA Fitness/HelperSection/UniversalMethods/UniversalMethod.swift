@@ -55,7 +55,7 @@ class UniversalMethod: NSObject {
     // MARK: Common Method for pushing the View Controller
     func pushVC(_ id : String, _ navC : UINavigationController?, storyBoard:String){
         let storyboard = UIStoryboard(name: storyBoard, bundle: nil)
-        if 
+        if
             let navC,
             let vc = storyboard.instantiateViewController(withIdentifier: id) as? UIViewController {
             vc.hidesBottomBarWhenPushed = true
@@ -96,7 +96,7 @@ class UniversalMethod: NSObject {
     }
     
     func custom_ActionSheet(vc: UIViewController, message:String){
-            actionSheetController = UIAlertController (title: "DBA Fitness", message: "", preferredStyle: UIAlertController.Style.actionSheet)
+        actionSheetController = UIAlertController (title: "DBA Fitness", message: "", preferredStyle: UIAlertController.Style.actionSheet)
         actionSheetController?.addAction(UIAlertAction(title: message, style: UIAlertAction.Style.cancel, handler: nil))
         if let actionSheetController {
             vc.present(actionSheetController, animated: true, completion: nil)
@@ -166,17 +166,17 @@ class UniversalMethod: NSObject {
 }
 
 public func generateThumbnail(url: URL) -> UIImage? {
-     do {
-         let asset = AVURLAsset(url: url)
-         let imageGenerator = AVAssetImageGenerator(asset: asset)
-         imageGenerator.appliesPreferredTrackTransform = true
-         let cgImage = try imageGenerator.copyCGImage(at: .zero,
-                                                      actualTime: nil)
-         return UIImage(cgImage: cgImage)
-     } catch {
-         return nil
-     }
- }
+    do {
+        let asset = AVURLAsset(url: url)
+        let imageGenerator = AVAssetImageGenerator(asset: asset)
+        imageGenerator.appliesPreferredTrackTransform = true
+        let cgImage = try imageGenerator.copyCGImage(at: .zero,
+                                                     actualTime: nil)
+        return UIImage(cgImage: cgImage)
+    } catch {
+        return nil
+    }
+}
 
 public func saveImageInDocumentDirectory(image: UIImage, fileName: String) -> URL?{
     guard
@@ -187,4 +187,13 @@ public func saveImageInDocumentDirectory(image: UIImage, fileName: String) -> UR
         return fileURL
     }
     return nil
+}
+
+public func debugLog(_ message: String, file: String = #file, function: String = #function, line: Int = #line) {
+#if DEBUG
+    if isLogEnable {
+        let fileName = (file as NSString).lastPathComponent
+        print("[\(fileName):\(line)] \(function) - \(message)")
+    }
+#endif
 }

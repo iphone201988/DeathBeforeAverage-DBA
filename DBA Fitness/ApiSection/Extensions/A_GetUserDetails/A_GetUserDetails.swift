@@ -48,7 +48,7 @@ extension UIViewController{
                     }else if(result.statusCode==204||result.statusCode==200||result.statusCode==201){
 
                         userInfo = try? JSONDecoder().decode(M_UserInfo.self, from: responseData)
-                        print(userInfo)
+                        debugLog("\(userInfo)")
                         DataSaver.dataSaverManager.saveData(key: "selectedLoc", data: userInfo?.data?.location ?? "")
                         DataSaver.dataSaverManager.saveData(key: "is_purchased", data:
                                                                 userInfo?.data?.is_purchased ?? "")
@@ -124,7 +124,7 @@ extension Trainer_Profile_View {
                     }else if(result.statusCode==204||result.statusCode==200||result.statusCode==201){
 
                         userInfo = try? JSONDecoder().decode(M_UserInfo.self, from: responseData)
-                        print("userInfo",userInfo)
+                        debugLog("userInfo: \(userInfo)")
                         if let requestsCount = userInfo?.data?.no_of_requests{
                             if requestsCount > 0{
                                 self.newRequestsView.isHidden = false
@@ -409,7 +409,7 @@ extension Trainer_Detail_View{
                     }else if(result.statusCode==204||result.statusCode==200||result.statusCode==201) {
 
                         userInfo = try? JSONDecoder().decode(M_UserInfo.self, from: responseData)
-print("userInfo \(userInfo)")
+                        debugLog("userInfo \(userInfo)")
                         DataSaver.dataSaverManager.saveData(key: "is_purchased", data:
                                                                 userInfo?.data?.is_purchased ?? "")
 

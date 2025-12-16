@@ -519,7 +519,7 @@ extension Add_Goals: UICollectionViewDataSource, UICollectionViewDelegate, UICol
                 
                 totalPhotos.text = "Photos \(photosArray.count)"
             } else {
-                print("Invalid index: \(index). Unable to remove item from photosArray.")
+                debugLog("Invalid index: \(index). Unable to remove item from photosArray.")
             }
         }
         

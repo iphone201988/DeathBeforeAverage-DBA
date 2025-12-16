@@ -40,7 +40,7 @@ extension UIViewController{
                 "userid" : userid,
             ]
             
-            print("header: \(APIheaders), url: \(apiUrl)")
+            debugLog("header: \(APIheaders), url: \(apiUrl)")
             
             Alamofire.upload(multipartFormData: { (multipartFormData) in
                 

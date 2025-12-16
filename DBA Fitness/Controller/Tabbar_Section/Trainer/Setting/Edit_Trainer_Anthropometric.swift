@@ -193,7 +193,7 @@ class Edit_Trainer_Anthropometric: UIViewController {
         anthropometricDict["body_fat_percentage"] = bodyFat.text
         anthropometricDict["sex"] = gender.text
         anthropometricDict["chest_size"] = chestSize.text
-        print("anthropometricDict \(anthropometricDict)")
+        debugLog("anthropometricDict \(anthropometricDict)")
         Constants.isEditAnthropometric = "1"
         addAnthropometric(parameters:anthropometricDict )
     }

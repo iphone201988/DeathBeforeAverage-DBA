@@ -282,7 +282,7 @@ extension Trainer_Edit_Post: UIImagePickerControllerDelegate, UINavigationContro
         
         if let savedVideoURL = saveVideoToDocumentDirectory(videoURL) {
             self.videoURL = savedVideoURL
-            print("Stored video URL: \(savedVideoURL.absoluteString)")
+            debugLog("Stored video URL: \(savedVideoURL.absoluteString)")
             
             // Generate Thumbnail
             let thumbnailData = generateThumbnail(from: savedVideoURL)
@@ -293,7 +293,7 @@ extension Trainer_Edit_Post: UIImagePickerControllerDelegate, UINavigationContro
                 addPlayButton(to: post_Pic, for: savedVideoURL)
             }
         } else {
-            print("Failed to save video.")
+            debugLog("Failed to save video.")
         }
     }
     
@@ -333,10 +333,10 @@ extension Trainer_Edit_Post: UIImagePickerControllerDelegate, UINavigationContro
                 try fileManager.removeItem(at: newURL)  // Remove if it already exists
             }
             try fileManager.copyItem(at: videoURL, to: newURL)
-            print("Video successfully saved at: \(newURL)")
+            debugLog("Video successfully saved at: \(newURL)")
             return newURL
         } catch {
-            print("Error saving video: \(error.localizedDescription)")
+            debugLog("Error saving video: \(error.localizedDescription)")
             return nil
         }
     }
@@ -362,7 +362,7 @@ extension Trainer_Edit_Post: UIImagePickerControllerDelegate, UINavigationContro
             }
             
         } catch {
-            print("Failed to generate thumbnail: \(error.localizedDescription)")
+            debugLog("Failed to generate thumbnail: \(error.localizedDescription)")
             return (nil, nil)
         }
     }

@@ -12,7 +12,7 @@ extension UIViewController{
             apimethod.commonMethod(url: ApiURLs.add_rating_and_comment, parameters: parameters, method: "POST") { (_ dict, _ success: Bool , _ error: Error?,_ response: Any, _ responseData) in
                 NVActivityIndicator.managerHandler.stopIndicator()
                 if success, let result = response as? HTTPURLResponse{
-                    print("result \(result)")
+                    debugLog("result \(result)")
                     if(result.statusCode==404||result.statusCode==400 || result.statusCode==401){
                         
                         if result.statusCode == 401{
